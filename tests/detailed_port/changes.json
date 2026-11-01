@@ -1,0 +1,310 @@
+{
+  "added": [
+    {
+      "sha256": "64F1AB0F37FE74B1688CE6D8E522BAB9FED3063D2F0FF2D535C58691EA98426C",
+      "path": "PLAN_DETAILED_PORT.md"
+    },
+    {
+      "path": "assets/old_port/build_manifest.json",
+      "sha256": "06BFA1E1A9D33E7E1BD64728900BE0280A840D916A016E44DA3F453E3C3D8D30",
+      "bytes": 816
+    },
+    {
+      "path": "assets/old_port/port_house.glb",
+      "sha256": "BAE8DBE49137A47A911C30E2FF7AB8A06A9604CD40EE59B6C602B2F71EEFF8E2",
+      "bytes": 234144
+    },
+    {
+      "path": "assets/old_port/port_house.glb.import",
+      "sha256": "B8C7ACBE478A827889074FB0F5B9E559918DDB7698BFA9469D0080664BDFE39D",
+      "bytes": 1161
+    },
+    {
+      "path": "assets/old_port/port_landscape.glb",
+      "sha256": "843E3B4F688ED621308D6371FD8B42A345B213A2F124412D7BF1B00B445408DA",
+      "bytes": 21391440
+    },
+    {
+      "path": "assets/old_port/port_landscape.glb.import",
+      "sha256": "0FB0CAF40C4B5A73D27FA1C985F08C4B6CF67845B087ACC0DEDE3700A0702001",
+      "bytes": 1172
+    },
+    {
+      "path": "assets/old_port/port_tree.glb",
+      "sha256": "39971385F76074A070F7D3B0CA69E10144C3428D72D2B3666C12D833FA47A4B1",
+      "bytes": 442044
+    },
+    {
+      "path": "assets/old_port/port_tree.glb.import",
+      "sha256": "90E9FC02FD4BB904821860BDD7964315786D30C1AA7254B8CFC6CA21994E38CB",
+      "bytes": 1158
+    },
+    {
+      "path": "assets/old_port/port_windmill.glb",
+      "sha256": "D7A01587C7D573BB258962863A30E7ADA46413C2578C82BD31C1B2EB8115E03A",
+      "bytes": 340832
+    },
+    {
+      "path": "assets/old_port/port_windmill.glb.import",
+      "sha256": "A9D2B15B0319C3AC34521F4E43FAED56401BA0F883AF12C68F80B112D1D416F3",
+      "bytes": 1170
+    },
+    {
+      "path": "assets/old_port/water.gdshader",
+      "sha256": "F4F1688D695DE5206FCD524A4CF8C272411B13E7CB82BD3A5A9CDCCEAF16CE79",
+      "bytes": 602
+    },
+    {
+      "path": "assets/old_port/water.gdshader.uid",
+      "sha256": "FD286B2637741D896EF4FCD9387514AFDE58EAD921171A103B11DFCA967BCE90",
+      "bytes": 20
+    },
+    {
+      "path": "tools/old_port/.gdignore",
+      "sha256": "01BA4719C80B6FE911B091A7C05124B64EEECE964E09C058EF8F9805DACA546B",
+      "bytes": 1
+    },
+    {
+      "path": "tools/old_port/.gitignore",
+      "sha256": "4D56952B0FB13BF8F9B6C13A6D4C34A075BAC3AF447636A1DF4335D7576E2F97",
+      "bytes": 14
+    },
+    {
+      "path": "tools/old_port/build_port.cjs",
+      "sha256": "61D9CE274D4399A8DBD16C93BC468C44A725009AF12602981E8F2099864F5C59",
+      "bytes": 16683
+    },
+    {
+      "path": "tools/old_port/package-lock.json",
+      "sha256": "0FCE196D24ACD00D5A25252811DE4D5007B73739E2CABEF290BDA48B8916AF41",
+      "bytes": 473
+    },
+    {
+      "path": "tools/old_port/package.json",
+      "sha256": "C9C20CF1C4AF7CD64B0D2A3550DD7A7AC7A41C7CB400E50115C3A55298050F20",
+      "bytes": 60
+    },
+    {
+      "path": "tools/old_port/README.md",
+      "sha256": "770D6D06DC7681A161239F3E4EBAE64AF80BD62F0053941745A8D9AA99F944CD",
+      "bytes": 1451
+    },
+    {
+      "path": "tests/detailed_port/acceptance_current_prompt.txt",
+      "sha256": "BC46E2798B35930A2EEFCCF1CD98D7D503FD5558BF67D28536D66C556D80BD70",
+      "bytes": 445
+    },
+    {
+      "path": "tests/detailed_port/after_hashes.json",
+      "sha256": "3D29CC88F7E8EA92475E26BF107BB91099C6FBBDB58D947D7E79ED07096B8ABF",
+      "bytes": 574
+    },
+    {
+      "path": "tests/detailed_port/before_hashes.json",
+      "sha256": "66C006E81DE1C8C06AF8CC4A1805D83CC2AB283FD4E1440490444EBFB0E937C7",
+      "bytes": 755
+    },
+    {
+      "path": "tests/detailed_port/build.log",
+      "sha256": "A388F085BBA80B98457C35C27F0F8F9F17EBE545BE017E208D6A1CE7B9CD9909",
+      "bytes": 416
+    },
+    {
+      "path": "tests/detailed_port/camera-final.log",
+      "sha256": "A94296580F45F4AC07FC08093E8EF6BBFC25975471419BBCC3989C065BD97F5D",
+      "bytes": 707
+    },
+    {
+      "path": "tests/detailed_port/camera.log",
+      "sha256": "A94296580F45F4AC07FC08093E8EF6BBFC25975471419BBCC3989C065BD97F5D",
+      "bytes": 707
+    },
+    {
+      "path": "tests/detailed_port/capture_port.gd",
+      "sha256": "3B7560B5612F37B1F656FBBA462435528F373CBD4E35A375FA81BA50822F41D5",
+      "bytes": 2128
+    },
+    {
+      "path": "tests/detailed_port/capture_port.gd.uid",
+      "sha256": "05A7BA033E066793D0AE8EFF1F6FA898313BEC39764ABC4B6A4B9ECC7842E418",
+      "bytes": 20
+    },
+    {
+      "path": "tests/detailed_port/capture-before.log",
+      "sha256": "FCC6364EA5069AFD503F0593AD851B598E789EC62AB848E46B1112F934BD551E",
+      "bytes": 752
+    },
+    {
+      "path": "tests/detailed_port/capture.log",
+      "sha256": "9F284F47F398CBAA63887CC9C18EF6E24F87DD9357810FE2C19C1752B5171F5F",
+      "bytes": 752
+    },
+    {
+      "path": "tests/detailed_port/game_3d.diff",
+      "sha256": "31B0DEB8864560834C1E45835279D97F64831FA43619F69833451E933310E198",
+      "bytes": 6807
+    },
+    {
+      "path": "tests/detailed_port/import.log",
+      "sha256": "A42386674FCEF2B2507F30FE0EA8422B35A2951834FAB2E67B36498BC20C9229",
+      "bytes": 5136
+    },
+    {
+      "path": "tests/detailed_port/RESULTS.md",
+      "sha256": "B9DA221C0341E21719CE4A5310A27AD96A6D7EC485996252AE5C41E04098587A",
+      "bytes": 5316
+    },
+    {
+      "path": "tests/detailed_port/route-final.log",
+      "sha256": "D4A6198DDCD73436851BDAC7B3EF5109FEA16ADDD2BCAEC203AADF44646FF8DF",
+      "bytes": 491
+    },
+    {
+      "path": "tests/detailed_port/route.log",
+      "sha256": "D4A6198DDCD73436851BDAC7B3EF5109FEA16ADDD2BCAEC203AADF44646FF8DF",
+      "bytes": 491
+    },
+    {
+      "path": "tests/detailed_port/after/01-panorama.png",
+      "sha256": "36B67E9C0FC5F0CD6F6F0F6475E4351B6869A66CF6047D2091669A5FD0EA71A0",
+      "bytes": 524518
+    },
+    {
+      "path": "tests/detailed_port/after/01-panorama.png.import",
+      "sha256": "C878F5BB23409C0B3A7DA5440EEC12A0BEBA5D29B22BC38D69675B56082F8B30",
+      "bytes": 962
+    },
+    {
+      "path": "tests/detailed_port/after/02-windmill-terraces.png",
+      "sha256": "1383BA799321726E429B4EBA20F7D088B0D84DB7DE96769232AAA99258159385",
+      "bytes": 432938
+    },
+    {
+      "path": "tests/detailed_port/after/02-windmill-terraces.png.import",
+      "sha256": "115B243D622B47EC38C53753552C48400835C33A9E74A237C0A7F6D321AFC0A9",
+      "bytes": 990
+    },
+    {
+      "path": "tests/detailed_port/after/03-great-tree.png",
+      "sha256": "4C4CC6D4CDB1ABB3B04489E7153A3F6124A5D2A3D08C1A39EC3200EFBFC578FC",
+      "bytes": 267532
+    },
+    {
+      "path": "tests/detailed_port/after/03-great-tree.png.import",
+      "sha256": "AB49D944B825D06EE2AED8FC6EF7296C809AA4F92D148C5E9712CC9F1D8C3092",
+      "bytes": 969
+    },
+    {
+      "path": "tests/detailed_port/after/04-lake-city.png",
+      "sha256": "BC789942D476E040A47315233E1B8B7F39D4C59421A431FD9690C3D7A4187EF8",
+      "bytes": 447328
+    },
+    {
+      "path": "tests/detailed_port/after/04-lake-city.png.import",
+      "sha256": "2D12D9729537A64A1A7557CA71643471E9786A7C444767291B9CC80E28855972",
+      "bytes": 966
+    },
+    {
+      "path": "tests/detailed_port/after/05-house-detail.png",
+      "sha256": "B5D3B3ACE648DA75A75C3674469BE2EFAB9E5B0088CA3FE9A6AA342E80A9C832",
+      "bytes": 270785
+    },
+    {
+      "path": "tests/detailed_port/after/05-house-detail.png.import",
+      "sha256": "4BB2EE3EAF8A0932569E31C197E67410D119A699AA28C978BE823B1195C5FD4C",
+      "bytes": 975
+    },
+    {
+      "path": "tests/detailed_port/after/06-playable-view.png",
+      "sha256": "1171977E3560187738B69B6A028B14FAFD152CE3F415CEF90B90E972485B5DAF",
+      "bytes": 316338
+    },
+    {
+      "path": "tests/detailed_port/after/06-playable-view.png.import",
+      "sha256": "D08F12B76808C2D9DE76FA1895646B26A5F4A1CCAC4CEBA1A86B27297E85D5D8",
+      "bytes": 978
+    },
+    {
+      "path": "tests/detailed_port/backup/game_3d.gd",
+      "sha256": "658DA0F3AC50D11185D2995C2B62E16CB7808FFD86A9903AB6E004F66251B340",
+      "bytes": 33204
+    },
+    {
+      "path": "tests/detailed_port/backup/old_port_camera.gd",
+      "sha256": "E694E2A7EF55BDDBCF24CA11DA9A67A70ABBA937AC0C2D2D1A228F45B648B7A8",
+      "bytes": 3766
+    },
+    {
+      "path": "tests/detailed_port/backup/project.godot",
+      "sha256": "51934F94B91FEFD463964EEBB4D91F627F7446136DF4CF1EC93ED6A826486904",
+      "bytes": 931
+    },
+    {
+      "path": "tests/detailed_port/backup/route_3d.gd",
+      "sha256": "3C14B3AD6A00000F5A84EC8E2A95F34CBDA0D6CF8484D6937BCC022F05B3BD3B",
+      "bytes": 9185
+    },
+    {
+      "path": "tests/detailed_port/before/01-panorama.png",
+      "sha256": "52FCDF6E0F7D273B22A66A9A1BA3147B171D66AAAD4B138E5EE81596C397473A",
+      "bytes": 428703
+    },
+    {
+      "path": "tests/detailed_port/before/02-old-port-panorama.png",
+      "sha256": "2EA6503155529B457ACC60C68238E9E66C085A0744E2A3A54EDFBB76B802AD89",
+      "bytes": 441575
+    },
+    {
+      "path": "tests/detailed_port/before/02-old-port-panorama.png.import",
+      "sha256": "2E1ECED04FFCEF55C79955198A0D6F04C194322B4E93675B50E1D9CE22302BE3",
+      "bytes": 991
+    },
+    {
+      "path": "tests/detailed_port/before/02-region.png",
+      "sha256": "8E4075F67BF97530E044A7EAF2CA650F80B88D010E6B43BEC4652A5199C5C315",
+      "bytes": 323700
+    },
+    {
+      "path": "tests/detailed_port/before/02-region.png.import",
+      "sha256": "10046966F0DFFEE7D54E9F32A256D26174FCB118B0E63D5A2F9C1C6BBCEB3349",
+      "bytes": 958
+    },
+    {
+      "path": "tests/detailed_port/before/02-windmill-terraces.png",
+      "sha256": "44575CADC3A10638BF3CF57E5AD6DC850875F531D22A4A9E360C62B040D88D15",
+      "bytes": 333407
+    },
+    {
+      "path": "tests/detailed_port/before/03-great-tree.png",
+      "sha256": "57C17BB3E8F9EFF486F3D514B8CC4BAF2C35057B843C0AB0E46771004FE0BA2B",
+      "bytes": 276089
+    },
+    {
+      "path": "tests/detailed_port/before/04-lake-city.png",
+      "sha256": "C2CB431EA76950562E3A7C99D2AB0B68B62220184FCB11479B6C2633BF94B741",
+      "bytes": 430531
+    },
+    {
+      "path": "tests/detailed_port/before/05-house-detail.png",
+      "sha256": "FFB38B0CA69185CB3FEC93AC101DABDA2619F4AA0949E4077DDCDD88BC15EF0F",
+      "bytes": 225231
+    },
+    {
+      "path": "tests/detailed_port/before/06-playable-view.png",
+      "sha256": "43C5B18D3CA24D26C31635F090D1A5EDFBB9BFCE23CE43F5A9673BF93E8B3EB6",
+      "bytes": 309452
+    }
+  ],
+  "excludedRebuildable": [
+    ".godot/",
+    "tools/old_port/node_modules/"
+  ],
+  "modified": [
+    {
+      "path": "game_3d.gd",
+      "sha256": "58A90A7EB40D6C384085ACEFCD5AE7A7DAAE41E54ACC93404ACE84D200D12EDB",
+      "diff": "tests/detailed_port/game_3d.diff",
+      "backup": "tests/detailed_port/backup/game_3d.gd"
+    }
+  ]
+}

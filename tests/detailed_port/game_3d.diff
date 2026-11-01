@@ -1,0 +1,130 @@
+diff --git a/tests/detailed_port/backup/game_3d.gd b/game_3d.gd
+index 3bea34b..7a9e1e2 100644
+--- a/tests/detailed_port/backup/game_3d.gd
++++ b/game_3d.gd
+@@ -8,7 +8,10 @@ const FANTASY_ASSET_PATHS = {
+     "house_fantasy": "res://assets/house_fantasy.glb",
+     "rock_crystal": "res://assets/rock_crystal.glb",
+     "airship_landmark": "res://assets/airship_landmark.glb",
+-    "lighthouse_beacon": "res://assets/lighthouse_beacon.glb"
++    "lighthouse_beacon": "res://assets/lighthouse_beacon.glb",
++    "port_landscape": "res://assets/old_port/port_landscape.glb",
++    "port_house": "res://assets/old_port/port_house.glb",
++    "port_tree": "res://assets/old_port/port_tree.glb"
+ }
+ const EXTENT = Vector2(280,240)
+ var story
+@@ -157,13 +160,14 @@ func person(parent: Node3D,pos: Vector3,color: Color,title: String="") -> Node3D
+ 	return n
+ 
+ func tree3(parent: Node3D,p: Vector3,s: float,color: Color,collider: bool=true) -> void:
+-	fantasy_asset("tree_fantasy",parent,p,Vector3.ONE*s)
++	var port_tree=is_instance_valid(story) and story.chapter==0
++	fantasy_asset("port_tree" if port_tree else "tree_fantasy",parent,p,Vector3.ONE*s*(0.64 if port_tree else 1.0))
+ 	# Preserve the original solid trunk collider independently from the visual GLB.
+ 	var trunk=cylinder(parent,p+Vector3(0,s*2,0),s*0.45,s*4,Color("655346"),s*0.30,collider)
+ 	trunk.visible=false
+ 
+ func building(parent: Node3D,p: Vector3,color: Color,clock: bool=false) -> void:
+-	fantasy_asset("house_fantasy",parent,p,Vector3.ONE)
++	fantasy_asset("port_house" if story.chapter==0 else "house_fantasy",parent,p,Vector3.ONE)
+ 	# BoxShape3D remains the walkable building boundary used by route_3d.
+ 	var solid=box3(parent,p+Vector3(0,3,0),Vector3(8,6,7),color,true); solid.visible=false
+ 	if clock:
+@@ -171,52 +175,26 @@ func building(parent: Node3D,p: Vector3,color: Color,clock: bool=false) -> void:
+ 		disc.rotation_degrees.x=90
+ 		box3(parent,p+Vector3(0,5.85,3.73),Vector3(0.09,0.75,0.1),Color("3b4c4c"))
+ 
+-func old_port_windmill(parent: Node3D, p: Vector3, scale_value: float=1.0) -> void:
+-	var n=Node3D.new(); n.name="OldPort_Windmill"; parent.add_child(n); n.position=p
+-	n.scale=Vector3.ONE*scale_value
+-	cylinder(n,Vector3(0,4.0,0),1.6,8.0,Color("ece0bd"),1.0)
+-	cylinder(n,Vector3(0,8.4,0),1.7,2.0,Color("a65b43"),0.0)
+-	var rotor=Node3D.new(); rotor.position=Vector3(0,7.0,1.2); n.add_child(rotor)
+-	rotor.rotation_degrees.z=24.0
+-	orb(rotor,Vector3(0,0,0.15),Vector3.ONE*0.45,Color("77573b"))
+-	for i in 4:
+-		var arm=Node3D.new(); arm.rotation_degrees.z=float(i)*90.0; rotor.add_child(arm)
+-		box3(arm,Vector3(0,2.1,0),Vector3(0.16,4.2,0.16),Color("77573b"))
+-		box3(arm,Vector3(0.46,2.7,0),Vector3(0.9,2.4,0.12),Color("f5e4b5"))
+-
+ func old_port_landscape() -> void:
+-	# Reference direction: a bright green coastal basin with terraces, cliffs,
+-	# windmills and a distant town. These are visual landmarks; route collision
+-	# remains authored separately by the existing story objects.
+-	var water=cylinder(region,Vector3(42,-0.05,86),1.0,0.12,Color("67c9d4"))
+-	water.mesh.radial_segments=64
+-	water.scale=Vector3(46,1,17)
+-	for i in 5:
+-		var p=Vector3(-82+i*31,0,45+i*6)
+-		p.y=height_at(p.x,p.z)-1.6
+-		var ledge=cylinder(region,p,8.5,3.2,Color("80937a"),9.0)
+-		ledge.scale=Vector3(1.25,1,0.6)
+-		var turf=cylinder(region,p+Vector3(0,1.65,0),9.0,0.18,Color("87b969"))
+-		turf.scale=Vector3(1.25,1,0.6)
+-	for p in [Vector3(-71,0,37),Vector3(-18,0,53),Vector3(19,0,62)]:
+-		p.y=height_at(p.x,p.z)
+-		old_port_windmill(region,p,1.05 if p.x<0 else 0.82)
+-	for p in [Vector3(-62,0,25),Vector3(-36,0,41),Vector3(-8,0,52),Vector3(24,0,46),Vector3(58,0,57)]:
+-		p.y=height_at(p.x,p.z)
+-		fantasy_asset("house_fantasy",region,p,Vector3.ONE*0.72)
+-	for p in [Vector3(-110,0,28),Vector3(-96,0,62),Vector3(82,0,43),Vector3(103,0,69)]:
+-		p.y=height_at(p.x,p.z)
+-		tree3(region,p,1.8,Color("7eb46b"),false)
+-	# A low cliff rim frames the port without blocking the playable paths.
+-	for p in [Vector3(-125,4,78),Vector3(112,5,78),Vector3(-118,3,108),Vector3(101,4,108)]:
+-		var cliff=box3(region,p,Vector3(13,5,4),Color("66856d"))
+-		cliff.rotation_degrees.z=3.0 if p.x<0 else -3.0
+-	label3(region,"旧港湾",Vector3(40,9,80),44)
+-	# Soft cloud groups break up the blue sky without external image assets.
++	# JSCAD-authored strata, shore, lattice mills, flower rows and cathedral town.
++	# Imported visuals share the existing height function; collision is unchanged.
++	var model=fantasy_asset("port_landscape",region,Vector3.ZERO)
++	model.name="JSCAD_OldPort_Landscape"
++	style_port_water(model)
+ 	for i in 7:
+-		var p=Vector3(-240+i*74,54+(i%3)*10,-185-(i%2)*55)
++		var p=Vector3(-240+i*74,62+(i%3)*10,-185-(i%2)*55)
+ 		for j in 3:
+-			orb(region,p+Vector3(j*9,sin(j*1.5)*4,0),Vector3(30,11+j*2,14),Color("f5f3df"))
++			orb(region,p+Vector3(j*9,sin(j*1.5)*4,0),Vector3(30,9+j*2,14),Color("f5f3df"))
++
++func style_port_water(node: Node) -> void:
++	if node is MeshInstance3D:
++		for surface in node.mesh.get_surface_count():
++			var mat=node.mesh.surface_get_material(surface)
++			if mat and mat.resource_name=="water":
++				var water_material=ShaderMaterial.new()
++				water_material.shader=load("res://assets/old_port/water.gdshader")
++				node.set_surface_override_material(surface,water_material)
++	for child in node.get_children(): style_port_water(child)
+ 
+ func airship(parent: Node3D,p: Vector3,s: float=1) -> void:
+ 	var n=Node3D.new(); parent.add_child(n); n.position=p
+@@ -256,6 +234,12 @@ func meadow_details(rng: RandomNumberGenerator) -> void:
+ 	for i in batch.instance_count:
+ 		var p=Vector3(rng.randf_range(-135,135),0,rng.randf_range(-115,115))
+ 		p.y=height_at(p.x,p.z)
++		# Lake decoration follows the existing collision terrain; grass stays ashore.
++		if story.chapter==0:
++			var lake_angle=atan2((p.z-74.0)/34.0,(p.x-78.0)/52.0)
++			var lake_radius=1.0+0.065*sin(3*lake_angle)+0.035*sin(7*lake_angle)
++			if Vector2((p.x-78.0)/52.0,(p.z-74.0)/34.0).length()<lake_radius:
++				p.y-=100.0
+ 		var scale_value=rng.randf_range(0.55,1.35)
+ 		batch.set_instance_transform(i,Transform3D(Basis(Vector3.UP,rng.randf_range(0,TAU)).scaled(Vector3.ONE*scale_value),p))
+ 		batch.set_instance_color(i,Color("b9d68b").lerp(Color.WHITE,rng.randf()))
+@@ -283,7 +267,7 @@ func build_region() -> void:
+ 		var wall=box3(region,edge,Vector3(3,40,246) if abs(edge.x)>1 else Vector3(286,40,3),ground,true)
+ 		wall.visible=false
+ 	var rng=RandomNumberGenerator.new(); rng.seed=6143+story.chapter*89
+-	for i in 20:
++	for i in (0 if story.chapter==0 else 20):
+ 		var x=rng.randf_range(-240,240); var z=-165.0-rng.randf_range(0,100)
+ 		var mountain_radius=rng.randf_range(15,40)
+ 		var mountain_height=rng.randf_range(35,85)
+@@ -667,3 +651,4 @@ func capture(filename: String) -> void:
+ 	print("GPU capture ",filename," result=",err)
+ 
+ 
++

@@ -1,0 +1,41 @@
+{
+  "tool": "JSCAD @jscad/modeling",
+  "version": "2.13.0",
+  "node": "v22.23.2",
+  "source": "tools/old_port/build_port.cjs",
+  "units": "metres, Y up",
+  "assets": [
+    {
+      "name": "port_house",
+      "triangles": 3136,
+      "materials": 14,
+      "bytes": 234144,
+      "jscadSolids": 197,
+      "buildMs": 47
+    },
+    {
+      "name": "port_windmill",
+      "triangles": 4652,
+      "materials": 10,
+      "bytes": 340832,
+      "jscadSolids": 270,
+      "buildMs": 52
+    },
+    {
+      "name": "port_tree",
+      "triangles": 6084,
+      "materials": 6,
+      "bytes": 442044,
+      "jscadSolids": 70,
+      "buildMs": 63
+    },
+    {
+      "name": "port_landscape",
+      "triangles": 296828,
+      "materials": 32,
+      "bytes": 21391440,
+      "jscadSolids": 25589,
+      "buildMs": 1734
+    }
+  ]
+}

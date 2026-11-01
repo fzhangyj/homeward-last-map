@@ -1,0 +1,216 @@
+{
+  "Hero_Player": {
+    "objects": 27,
+    "vertices": 1406,
+    "triangles": 2708,
+    "materials": [
+      "Cloth_blue",
+      "Cloth_ivory",
+      "Crystal_azure",
+      "Eyes_lapis",
+      "Hair_ink",
+      "Skin_warm",
+      "Trim_gold"
+    ],
+    "min": [
+      -0.7361260652542114,
+      -0.4946691691875458,
+      -0.03000003471970558
+    ],
+    "max": [
+      0.7361260652542114,
+      0.5428001880645752,
+      2.819999933242798
+    ],
+    "glb": {
+      "bytes": 146780,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 27,
+      "meshes": 27,
+      "materials": 7,
+      "animations": 0
+    }
+  },
+  "Hero_Companion": {
+    "objects": 28,
+    "vertices": 1566,
+    "triangles": 3028,
+    "materials": [
+      "Cloth_coral",
+      "Cloth_ivory",
+      "Cloth_mint",
+      "Crystal_azure",
+      "Eyes_lapis",
+      "Hair_ink",
+      "Hair_teal",
+      "Skin_soft"
+    ],
+    "min": [
+      -0.7361260652542114,
+      -0.4946691691875458,
+      -0.03000003471970558
+    ],
+    "max": [
+      0.7361260652542114,
+      0.5428001880645752,
+      3.005000114440918
+    ],
+    "glb": {
+      "bytes": 153896,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 28,
+      "meshes": 28,
+      "materials": 8,
+      "animations": 0
+    }
+  },
+  "Tree_Fantasy": {
+    "objects": 15,
+    "vertices": 1458,
+    "triangles": 2856,
+    "materials": [
+      "Leaf_light",
+      "Leaf_spring",
+      "Trim_gold",
+      "Wood_light",
+      "Wood_warm"
+    ],
+    "min": [
+      -2.40000057220459,
+      -1.899999737739563,
+      -6.556511067401516e-08
+    ],
+    "max": [
+      2.4700002670288086,
+      2.000000476837158,
+      6.525000095367432
+    ],
+    "glb": {
+      "bytes": 92684,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 15,
+      "meshes": 15,
+      "materials": 5,
+      "animations": 0
+    }
+  },
+  "House_Fantasy": {
+    "objects": 121,
+    "vertices": 1122,
+    "triangles": 1764,
+    "materials": [
+      "Cloth_ivory",
+      "Roof_cerulean",
+      "Roof_tile_blue",
+      "Roof_tile_cyan",
+      "Trim_gold",
+      "Wood_light",
+      "Wood_warm"
+    ],
+    "min": [
+      -4.639999866485596,
+      -3.8399996757507324,
+      -2.2649371089755732e-07
+    ],
+    "max": [
+      4.639999866485596,
+      3.840000629425049,
+      6.45836067199707
+    ],
+    "glb": {
+      "bytes": 937316,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 121,
+      "meshes": 121,
+      "materials": 7,
+      "animations": 0
+    }
+  },
+  "Rock_Crystal": {
+    "objects": 6,
+    "vertices": 78,
+    "triangles": 132,
+    "materials": [
+      "Crystal_azure",
+      "Stone_lilac"
+    ],
+    "min": [
+      -1.4629509449005127,
+      -1.3019001483917236,
+      -0.7000002264976501
+    ],
+    "max": [
+      1.7286887168884277,
+      1.4450002908706665,
+      3.0
+    ],
+    "glb": {
+      "bytes": 10992,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 6,
+      "meshes": 6,
+      "materials": 2,
+      "animations": 0
+    }
+  },
+  "Airship_Landmark": {
+    "objects": 12,
+    "vertices": 770,
+    "triangles": 1496,
+    "materials": [
+      "Airship_canvas",
+      "Airship_sail",
+      "Trim_gold",
+      "Wood_warm"
+    ],
+    "min": [
+      -5.399994850158691,
+      -8.5,
+      0.6000001430511475
+    ],
+    "max": [
+      5.399998664855957,
+      8.500000953674316,
+      8.700000762939453
+    ],
+    "glb": {
+      "bytes": 64556,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 12,
+      "meshes": 12,
+      "materials": 4,
+      "animations": 0
+    }
+  },
+  "Lighthouse_Beacon": {
+    "objects": 11,
+    "vertices": 632,
+    "triangles": 1232,
+    "materials": [
+      "Cloth_ivory",
+      "Crystal_azure",
+      "Roof_cerulean",
+      "Trim_gold",
+      "Wood_light",
+      "Wood_warm"
+    ],
+    "min": [
+      -2.3499999046325684,
+      -2.349999189376831,
+      -2.5033949668795685e-07
+    ],
+    "max": [
+      2.3499999046325684,
+      2.3500006198883057,
+      13.949999809265137
+    ],
+    "glb": {
+      "bytes": 60596,
+      "generator": "Khronos glTF Blender I/O v4.5.51",
+      "nodes": 11,
+      "meshes": 11,
+      "materials": 6,
+      "animations": 0
+    }
+  }
+}
